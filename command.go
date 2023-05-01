@@ -1,17 +1,21 @@
 package mvcGo
 
 import (
+	"errors"
 	"fmt"
 	"os"
 
 	"github.com/Findryankp/mvcGo/apps"
 )
 
-func Init() {
+func Init() error {
 	var argsRaw = os.Args
 	if len(argsRaw) >= 2 {
 		Command(argsRaw)
+		return errors.New("run command finish")
 	}
+
+	return nil
 }
 
 func Command(argsRaw []string) {

@@ -1,9 +1,25 @@
-package apps
+package configs
 
-func CreateMysqlCon() string {
+import (
+	"fmt"
 
-	GetPackage("gorm.io/gorm")
-	GetPackage("gorm.io/driver/mysql")
+	"github.com/Findryankp/mvcGo/apps/utils"
+)
+
+func MysqlConCreate() {
+	utils.PackageIntall("gorm.io/gorm")
+	utils.PackageIntall("gorm.io/driver/mysql")
+
+	fileConfig, err := utils.FilesCreate("./configs", "mysqlCon.go")
+	if err != nil {
+		fmt.Println(err.Error())
+	} else {
+		utils.FilesAddContent(fileConfig, MysqlConContent())
+		fmt.Println("setup configs/mysqlCon success")
+	}
+}
+
+func MysqlConContent() string {
 
 	var text = `package configs
 
@@ -40,9 +56,4 @@ func InitMigration() {
 	`
 
 	return text
-}
-
-func AddMigration(modelName string) {
-	lineNumber := GetLineNumber("./configs/mysqlCon.go", `fmt.Println("Migration done.")`)
-	InsertAfterText("./configs/mysqlCon.go", `func InitRouter(e *echo.Echo){`+"\n"+`	`+modelName+"Router(e)", lineNumber-3)
 }

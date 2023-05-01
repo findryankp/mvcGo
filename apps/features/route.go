@@ -1,28 +1,30 @@
-package apps
+package features
 
 import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/Findryankp/mvcGo/apps/utils"
 )
 
-func CreateRoute(route string) {
+func RouteCreate(route string) {
 	fileName := fmt.Sprintf("./routes/%sRouter.go", route)
 	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
 	if err != nil {
 		return
 	}
 
-	AddContentToFile(file, ContentRoute(route))
+	utils.FilesAddContent(file, RouteContent(route))
 
-	lineNumber := GetLineNumber("./routes/initRoutes.go", `func InitRouter(e *echo.Echo)`)
-	InsertAfterText("./routes/initRoutes.go", `func InitRouter(e *echo.Echo){`+"\n"+`	`+route+"Router(e)", lineNumber-1)
+	lineNumber := utils.LineNumberGet("./routes/initRoutes.go", `func InitRouter(e *echo.Echo)`)
+	utils.LineNumberInsertText("./routes/initRoutes.go", `func InitRouter(e *echo.Echo){`+"\n"+`	`+route+"Router(e)", lineNumber-1)
 
 	fmt.Println("Routes successfully created")
 }
 
-func ContentRoute(routeName string) (text string) {
-	moduleName, _ := GetModuleName()
+func RouteContent(routeName string) (text string) {
+	moduleName, _ := utils.ModuleNameGet()
 	lowerCase := strings.ToLower(routeName)
 	text = `package routes
 
@@ -43,9 +45,19 @@ func ` + routeName + `Router(e *echo.Echo) {
 	return
 }
 
-func CreateInitRoute() string {
-	GetPackage("github.com/labstack/echo/v4")
-	moduleName, _ := GetModuleName()
+func InitRouteCreate() {
+	fileRoute, err := utils.FilesCreate("./routes", "initRoutes.go")
+	if err != nil {
+		fmt.Println(err.Error())
+	} else {
+		utils.FilesAddContent(fileRoute, InitRouteContent())
+		fmt.Println("setup routes/initRoutes success")
+	}
+}
+
+func InitRouteContent() string {
+	utils.PackageIntall("github.com/labstack/echo/v4")
+	moduleName, _ := utils.ModuleNameGet()
 
 	var text = `package routes
 

@@ -1,11 +1,11 @@
-package apps
+package utils
 
 import (
 	"fmt"
 	"os"
 )
 
-func CreateFolderIfNotExist() {
+func FolderCreate() {
 	folderName := []string{"controllers", "models", "helpers", "configs", "routes"}
 	for _, v := range folderName {
 		if _, err := os.Stat(v); os.IsNotExist(err) {

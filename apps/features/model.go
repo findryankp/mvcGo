@@ -1,12 +1,14 @@
-package apps
+package features
 
 import (
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/Findryankp/mvcGo/apps/utils"
 )
 
-func CreateModel(modelName string) {
+func ModelCreate(modelName string) {
 	fileName := fmt.Sprintf("./models/%s.go", modelName)
 
 	// Attempt to open the file
@@ -15,12 +17,12 @@ func CreateModel(modelName string) {
 		return
 	}
 
-	AddContentToFile(file, contentModel(modelName))
+	utils.FilesAddContent(file, ModelContent(modelName))
 
 	fmt.Println("Model successfully created")
 }
 
-func contentModel(modelName string) (text string) {
+func ModelContent(modelName string) (text string) {
 	lowerCase := strings.ToLower(modelName)
 	text = `package models
 

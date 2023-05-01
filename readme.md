@@ -22,12 +22,21 @@ for example :
   </a>
 </div>
 
-2. Init mvcGo on your projects
+2. Run this syntax in cmd
 ```shell
 go run . init
 ```
 
-3. Set .env with your own configuration database
+3. Import all packages needed
+for example :
+<br/>
+<div align="left">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/02.png" alt="Logo" height="200" width="400">
+  </a>
+</div>  
+
+4. Set .env with your own configuration database
 
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
@@ -42,4 +51,4 @@ go run . features FeaturesNames
 ```
 ex : go run mvcGo features Products
 
-### Done, enjoy it
+### Done, enjoy it.

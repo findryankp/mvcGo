@@ -1,4 +1,4 @@
-package apps
+package utils
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-func GetPackage(link string) {
+func PackageIntall(link string) {
 	cmd := exec.Command("go", "get", "-u", link)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr

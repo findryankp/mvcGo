@@ -1,24 +1,26 @@
-package apps
+package features
 
 import (
 	"fmt"
 	"os"
+
+	"github.com/Findryankp/mvcGo/apps/utils"
 )
 
-func CreateController(controllerName string) {
+func ControllerCreate(controllerName string) {
 	fileName := fmt.Sprintf("./controllers/%s.go", controllerName)
 	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
 	if err != nil {
 		return
 	}
 
-	AddContentToFile(file, ContentController(controllerName))
+	utils.FilesAddContent(file, ControllerContent(controllerName))
 
 	fmt.Println("Controller successfully created")
 }
 
-func ContentController(controllerName string) (text string) {
-	moduleName, _ := GetModuleName()
+func ControllerContent(controllerName string) (text string) {
+	moduleName, _ := utils.ModuleNameGet()
 	text = `package controllers
 
 import (

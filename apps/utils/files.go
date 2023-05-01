@@ -1,11 +1,15 @@
-package apps
+package utils
 
 import (
 	"errors"
 	"os"
 )
 
-func CreateFile(path, fileName string) (*os.File, error) {
+func FilesAddContent(file *os.File, content string) {
+	file.WriteString(content)
+}
+
+func FilesCreate(path, fileName string) (*os.File, error) {
 	create := path + "/" + fileName
 	file, err := os.OpenFile(create, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
 	if err != nil {
@@ -16,8 +20,4 @@ func CreateFile(path, fileName string) (*os.File, error) {
 		}
 	}
 	return file, nil
-}
-
-func AddContentToFile(file *os.File, content string) {
-	file.WriteString(content)
 }
