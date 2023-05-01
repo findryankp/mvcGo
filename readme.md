@@ -10,12 +10,24 @@ go get -u github.com/Findryankp/mvcGo
 ```
 
 ## Initialization
-1. Init mvcGo on your projects
+1. First step, add this to your **main** function
+```go
+mvcGo.Init()
+```
+for example :
+<br/>
+<div align="left">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/01.png" alt="Logo" height="200" width="400">
+  </a>
+</div>
+
+2. Init mvcGo on your projects
 ```shell
-go run mvcGo init
+go run . init
 ```
 
-2. Set .env with your own configuration database
+3. Set .env with your own configuration database
 
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
@@ -23,37 +35,11 @@ go run mvcGo init
   </a>
 </div>
 
-### Add this to your function main
-- to load environment file and run the project with **ECHO**
-```go
-if err := godotenv.Load(".env"); err != nil {
-    log.Fatalf("Error loading .env file")
-}
-e := echo.New()
-routes.InitRouter(e)
-e.Logger.Fatal(e.Start(":8080"))
-```
-for example :
-<br/>
-<div align="left">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/mainFunction.png" alt="Logo" height="200" width="380">
-  </a>
-</div>
-
 ## Create new feature
 1. run this in your cmd
 ```shell
-go run mvcGo features FeaturesNames
+go run . features FeaturesNames
 ```
 ex : go run mvcGo features Products
 
-2. set and add to routes/initRouter file with your features
-```go
-FeaturesNamesRouter(e)
-```
-<div align="left">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/initRoutes.png" alt="Logo" height="200" width="380">
-  </a>
-</div>
+### Done, enjoy it
