@@ -23,6 +23,7 @@ func CommandFeature(arg []string) {
 		features.ModelCreate(arg[2])
 		features.ControllerCreate(arg[2])
 		features.RouteCreate(arg[2])
+		features.MigrationCreate(arg[2])
 	}
 }
 
