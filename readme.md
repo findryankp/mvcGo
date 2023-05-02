@@ -6,7 +6,7 @@ Inspired by laravel to automate feature creation to make it faster and easier
 
 ## Import
 ```shell
-go get -u github.com/Findryankp/mvcGo
+go get -u github.com/Findryankp/mvcGo@latest
 ```
 
 ## Step By Step
