@@ -53,7 +53,7 @@ ex : go run mvcGo features Rooms
 * CRUD controller, model, route, and migratiton feature from your FeatureNames will be created
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/03.png" alt="Logo" height="100" width="500">
+    <img src="images/03.png" alt="Logo" height="180" width="400">
   </a>
 </div>
 
