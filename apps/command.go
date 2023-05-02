@@ -5,7 +5,7 @@ import (
 
 	"github.com/Findryankp/mvcGo/apps/configs"
 	"github.com/Findryankp/mvcGo/apps/features"
-	"github.com/Findryankp/mvcGo/apps/features/users"
+	"github.com/Findryankp/mvcGo/apps/middlewares"
 	"github.com/Findryankp/mvcGo/apps/utils"
 )
 
@@ -32,13 +32,7 @@ func CommandInit() {
 	utils.FolderCreate()
 	fmt.Println("setup folder success")
 
-	configs.EnvironmentCreate()
-	configs.ResponseCreate()
-	configs.MysqlConCreate()
+	configs.InitConfig()
 	features.InitRouteCreate()
-
-	users.InitUsers()
-
-	//add to Main function
-	configs.MainAdd()
+	middlewares.InitMiddlewares()
 }

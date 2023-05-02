@@ -8,13 +8,13 @@ import (
 )
 
 func UsersRouteCreate() {
-	fileName := fmt.Sprintf("./routes/%s.go", "Users")
+	fileName := fmt.Sprintf("./routes/%s.go", "UsersRouter")
 	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
 	if err != nil {
 		return
 	}
 
-	utils.FilesAddContent(file, UserModelContent())
+	utils.FilesAddContent(file, UserRouteContent())
 
 	lineNumber := utils.LineNumberGet("./routes/initRoutes.go", `func InitRouter(e *echo.Echo)`)
 	utils.LineNumberInsertText("./routes/initRoutes.go", `func InitRouter(e *echo.Echo){`+"\n"+`	`+"UsersRouter(e)", lineNumber-1)

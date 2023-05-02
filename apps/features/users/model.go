@@ -44,7 +44,7 @@ type UsersLogin struct {
 	Password string ` + "`" + `json:"` + "password" + ` form:"` + "password" + "`" + `
 }
 
-func (user *User) BeforeCreate(tx *gorm.DB) (err error) {
+func (user *Users) BeforeCreate(tx *gorm.DB) (err error) {
 	user.Password = helpers.EncryptPassword(user.Password)
 
 	err = nil
