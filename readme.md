@@ -34,6 +34,7 @@ go run . init
   </a>
 </div>  
 <br/>
+
 4. Set .env with your own configuration database
 
 <div align="left">
