@@ -9,7 +9,7 @@ Inspired by laravel to automate feature creation to make it faster and easier
 go get -u github.com/Findryankp/mvcGo
 ```
 
-## Initialization
+## Step By Step
 1. First step, add this to your **main** function
 ```go
 mvcGo.Init()
@@ -44,7 +44,7 @@ go run . init
 </div>
 
 ## Create new feature
-1. run this in your cmd
+run this in your cmd
 ```shell
 go run . features FeaturesNames
 ```
