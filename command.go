@@ -1,4 +1,4 @@
-package mvcGo
+package main
 
 import (
 	"errors"

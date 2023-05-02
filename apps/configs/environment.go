@@ -17,11 +17,16 @@ func EnvironmentCreate() {
 }
 
 func EnvironmentContent() string {
-	var text = `DBUSERNAME=findryankp
+	var text = `#MYSQLDB
+DBUSERNAME=findryankp
 DBPASS=findryankp
 DBHOST=localhost
 DBPORT=3306
 DBNAME=testdb
+
+#JWT
+SECRETKEY=SECRETJWT
+HEADERAUTH=Authorization
 	`
 	return text
 }
