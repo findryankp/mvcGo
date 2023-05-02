@@ -12,7 +12,10 @@ go get -u github.com/Findryankp/mvcGo
 ## Step By Step
 1. First step, add this to your **main** function
 ```go
-mvcGo.Init()
+if err := mvcGo.Init(); err != nil {
+  fmt.Println(err)
+  return
+}
 ```
 for example :
 <br/>
@@ -48,9 +51,23 @@ run this in your cmd
 ```shell
 go run . features FeaturesNames
 ```
-ex : go run mvcGo features Products
+ex : go run mvcGo features Rooms
+
+* CRUD controller, model, route, and migratiton feature from your FeatureNames will be created
+<div align="left">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/03.png" alt="Logo" height="100" width="400">
+  </a>
+</div>
 
 ### Run Project
 ```shell
 go run .
 ```
+
+try it with your postman or another
+<div align="left">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/04.png" alt="Logo" height="200" width="600">
+  </a>
+</div>

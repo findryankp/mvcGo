@@ -20,7 +20,7 @@ func Init() error {
 
 func Command(argsRaw []string) {
 	args := []string{
-		"features", "init", "-f",
+		"features", "init",
 	}
 
 	flag := false

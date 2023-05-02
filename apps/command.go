@@ -11,7 +11,7 @@ import (
 )
 
 func ExcecutionArgument(arg []string) {
-	if arg[1] == "features" || arg[1] == "-f" {
+	if arg[1] == "features" {
 		CommandFeature(arg)
 	} else if arg[1] == "init" {
 		CommandInit()

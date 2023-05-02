@@ -32,16 +32,16 @@ import (
 
 func ` + controllerName + `(c echo.Context) error {
 	var data []models.` + controllerName + `
-	if err := configs.DB.Find(&data); err != nil {
-		return c.JSON(500, helpers.ResponseFail("err"))
+	if err := configs.DB.Find(&data); err.Error != nil {
+		return c.JSON(500, helpers.ResponseFail(err.Error.Error()))
 	}
 	return c.JSON(200, helpers.ResponseSuccess("-", data))
 }
 
 func ` + controllerName + `ById(c echo.Context) error {
 	var data models.` + controllerName + `
-	if err := configs.DB.First(&data, c.Param("id")); err != nil {
-		return c.JSON(500, helpers.ResponseFail("err"))
+	if err := configs.DB.First(&data, c.Param("id")); err.Error != nil {
+		return c.JSON(500, helpers.ResponseFail(err.Error.Error()))
 	}
 	return c.JSON(200, helpers.ResponseSuccess("-", data))
 }
@@ -53,8 +53,8 @@ func ` + controllerName + `Create(c echo.Context) error {
 	}
 
 	data := models.RequestToModel` + controllerName + `(request)
-	if err := configs.DB.Create(&data); err != nil {
-		return c.JSON(500, helpers.ResponseFail("err"))
+	if err := configs.DB.Create(&data); err.Error != nil {
+		return c.JSON(500, helpers.ResponseFail(err.Error.Error()))
 	}
 
 	return c.JSON(201, helpers.ResponseSuccess("data created", nil))
@@ -67,8 +67,8 @@ func ` + controllerName + `Update(c echo.Context) error {
 	}
 
 	data := models.RequestToModel` + controllerName + `(request)
-	if err := configs.DB.Where("id = ?", c.Param("id")).Updates(&data); err != nil {
-		return c.JSON(500, helpers.ResponseFail("err"))
+	if err := configs.DB.Where("id = ?", c.Param("id")).Updates(&data); err.Error != nil {
+		return c.JSON(500, helpers.ResponseFail(err.Error.Error()))
 	}
 
 	return c.JSON(200, helpers.ResponseSuccess("data updated", nil))
@@ -76,7 +76,7 @@ func ` + controllerName + `Update(c echo.Context) error {
 
 func ` + controllerName + `Delete(c echo.Context) error {
 	var data models.` + controllerName + `
-	if err := configs.DB.Where("id = ?", c.Param("id")).First(&data).Error; err != nil {
+	if err := configs.DB.Where("id = ?", c.Param("id")).First(&data); err.Error != nil {
 		return c.JSON(404, helpers.ResponseFail("data not found"))
 	}
 
