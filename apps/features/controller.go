@@ -8,7 +8,7 @@ import (
 )
 
 func ControllerCreate(controllerName string) {
-	fileName := fmt.Sprintf("./controllers/%s.go", controllerName)
+	fileName := fmt.Sprintf("./controllers/%sController.go", controllerName)
 	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
 	if err != nil {
 		return

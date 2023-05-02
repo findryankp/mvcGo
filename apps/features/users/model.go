@@ -34,14 +34,14 @@ type Users struct {
 }
 
 type UsersRegister struct {
-	Name     string ` + "`" + `json:"` + "name" + ` form:"` + `name"` + "`" + `
-	Email    string ` + "`" + `json:"` + "email" + ` form:"` + `email"` + "`" + `
-	Password string ` + "`" + `json:"` + "password" + ` form:"` + `password"` + "`" + `
+	Name     string ` + "`" + `json:"` + `name"` + ` form:"` + `name"` + "`" + `
+	Email    string ` + "`" + `json:"` + `email"` + ` form:"` + `email"` + "`" + `
+	Password string ` + "`" + `json:"` + `password"` + ` form:"` + `password"` + "`" + `
 }
 
 type UsersLogin struct {
-	Email    string ` + "`" + `json:"` + "email" + ` form:"` + `email"` + "`" + `
-	Password string ` + "`" + `json:"` + "password" + ` form:"` + `password"` + "`" + `
+	Email    string ` + "`" + `json:"` + `email"` + ` form:"` + `email"` + "`" + `
+	Password string ` + "`" + `json:"` + `password"` + ` form:"` + `password"` + "`" + `
 }
 
 func (user *Users) BeforeCreate(tx *gorm.DB) (err error) {
