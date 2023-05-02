@@ -27,12 +27,11 @@ for example :
 go run . init
 ```
 
-3. Import all packages needed
-for example :
+3. If success, tile like this will be generated :
 <br/>
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/02.png" alt="Logo" height="200" width="400">
+    <img src="images/02.png" alt="Logo" height="200" width="500">
   </a>
 </div>  
 
