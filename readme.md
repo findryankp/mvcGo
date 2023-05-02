@@ -12,10 +12,7 @@ go get -u github.com/Findryankp/mvcGo
 ## Step By Step
 1. First step, add this to your **main** function
 ```go
-if err := mvcGo.Init(); err != nil {
-  fmt.Println(err)
-  return
-}
+mvcGo.Init()
 ```
 for example :
 <br/>
