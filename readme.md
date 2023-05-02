@@ -1,5 +1,5 @@
 # mvcGo
-Inspired by laravel to automate feature creation to make it faster and easier
+Inspired from laravel to automate feature creation to make it faster and easier
 
 **Development by:** 
 - Findryankp
