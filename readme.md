@@ -30,7 +30,7 @@ go run . init
 3. If success, files like this will be generated :
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/02.png" alt="Logo" height="200" width="500">
+    <img src="images/02.png" alt="Logo" height="250" width="500">
   </a>
 </div>  
 <br/>
@@ -39,7 +39,7 @@ go run . init
 
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/env.png" alt="Logo" height="100" width="200">
+    <img src="images/env.png" alt="Logo" height="150" width="200">
   </a>
 </div>
 
