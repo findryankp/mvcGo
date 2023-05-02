@@ -25,53 +25,52 @@ import (
 	"` + moduleName + `/configs"
 	"` + moduleName + `/helpers"
 	"` + moduleName + `/models"
-	"net/http"
 
 	"github.com/labstack/echo/v4"
 )
 
 func Register(c echo.Context) error {
-	var user models.User
+	var user models.Users
 	if err := c.Bind(&user); err != nil {
-		return helpers.ResponseJson(c, http.StatusBadRequest, false, "-", err.Error())
+		return c.JSON(400,helpers.ResponseFail(err.Error()))
 	}
 
 	query := configs.DB.Create(&user)
 	if query.Error != nil {
-		return helpers.ResponseJson(c, http.StatusBadRequest, false, "Data not found", query.Error)
+		return c.JSON(404,helpers.ResponseFail("not found"))
 	}
 
-	return helpers.ResponseJson(c, http.StatusCreated, true, "Registered succesfully", user)
+	return c.JSON(201,helpers.ResponseSuccess("Registered succesfully",user))
 }
 
 func Login(c echo.Context) error {
-	var user models.User
-	var request models.User
+	var user models.Users
+	var request models.Users
 
 	if err := c.Bind(&request); err != nil {
-		return helpers.ResponseJson(c, http.StatusBadRequest, false, "-", err.Error())
+		return c.JSON(400,helpers.ResponseFail(err.Error()))
 	}
 
 	record := configs.DB.Where("email = ?", request.Email).First(&user)
 	if record.Error != nil {
-		return helpers.ResponseJson(c, http.StatusBadRequest, false, "-", record.Error.Error())
+		return c.JSON(400,helpers.ResponseFail(record.Error.Error()))
 	}
 
 	credentialError := helpers.CheckPassword(request.Password, user.Password)
 	if !credentialError {
-		return helpers.ResponseJson(c, http.StatusUnauthorized, false, "Invalid Credential", nil)
+		return c.JSON(401,helpers.ResponseFail("Invalid Credential"))
 	}
 
 	tokenString, err := helpers.GenerateToken(int(user.ID))
 	if err != nil {
-		return helpers.ResponseJson(c, http.StatusBadRequest, false, "-", err.Error())
+		return c.JSON(400,helpers.ResponseFail(err.Error()))
 	}
 
 	response := map[string]string{
 		"token": tokenString,
 	}
 
-	return helpers.ResponseJson(c, http.StatusOK, true, "-", response)
+	return c.JSON(200,helpers.ResponseSuccess("-",response))
 }
 `
 

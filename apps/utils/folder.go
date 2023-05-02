@@ -6,7 +6,7 @@ import (
 )
 
 func FolderCreate() {
-	folderName := []string{"controllers", "models", "helpers", "configs", "routes"}
+	folderName := []string{"controllers", "models", "helpers", "configs", "routes", "middlewares"}
 	for _, v := range folderName {
 		if _, err := os.Stat(v); os.IsNotExist(err) {
 			// Create folder

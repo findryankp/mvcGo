@@ -5,6 +5,7 @@ import (
 
 	"github.com/Findryankp/mvcGo/apps/configs"
 	"github.com/Findryankp/mvcGo/apps/features"
+	"github.com/Findryankp/mvcGo/apps/features/users"
 	"github.com/Findryankp/mvcGo/apps/middlewares"
 	"github.com/Findryankp/mvcGo/apps/utils"
 )
@@ -35,4 +36,5 @@ func CommandInit() {
 	configs.InitConfig()
 	features.InitRouteCreate()
 	middlewares.InitMiddlewares()
+	users.InitUsers()
 }

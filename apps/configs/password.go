@@ -11,7 +11,7 @@ func PasswordCreate() {
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
-		utils.FilesAddContent(fileResponse, ResponseContent())
+		utils.FilesAddContent(fileResponse, PasswordContent())
 		fmt.Println("setup helpers/password success")
 	}
 }

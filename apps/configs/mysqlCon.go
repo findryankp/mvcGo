@@ -20,13 +20,13 @@ func MysqlConCreate() {
 }
 
 func MysqlConContent() string {
-
+	moduleName, _ := utils.ModuleNameGet()
 	var text = `package configs
 
 import (
 	"fmt"
 	"os"
-
+	"` + moduleName + `/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -51,7 +51,7 @@ func InitDB() {
 
 func InitMigration() {
 	DB.AutoMigrate(
-		&models.User{},
+		&models.Users{},
 	)
 	fmt.Println("Migration done.")
 }

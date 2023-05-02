@@ -10,15 +10,8 @@ func MainAdd() {
 
 func MainContent() string {
 	var text = `
-if err := godotenv.Load(".env"); err != nil {
-	log.Fatalf("Error loading .env file")
-}
-
-configs.InitDB()
-
-e := echo.New()
-routes.InitRouter(e)
-e.Logger.Fatal(e.Start(":8080"))
+	//run on port 8080
+	LoadConfig(":8080")
 `
 
 	return text

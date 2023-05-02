@@ -1,7 +1,7 @@
 package users
 
 func InitUsers() {
-	UserModelCreate()
+	UsersModelCreate()
 	UsersControllerCreate()
 	UsersRouteCreate()
 }
