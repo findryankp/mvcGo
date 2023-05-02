@@ -1,8 +1,21 @@
 package users
 
-import "github.com/Findryankp/mvcGo/apps/utils"
+import (
+	"fmt"
+	"os"
 
-func UsersControllerCreate() {}
+	"github.com/Findryankp/mvcGo/apps/utils"
+)
+
+func UsersControllerCreate() {
+	fileName := fmt.Sprintf("./controllers/%s.go", "UsersController")
+	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
+	if err != nil {
+		return
+	}
+
+	utils.FilesAddContent(file, UsersControllerConten())
+}
 
 func UsersControllerConten() string {
 	moduleName, _ := utils.ModuleNameGet()

@@ -5,6 +5,7 @@ import (
 
 	"github.com/Findryankp/mvcGo/apps/configs"
 	"github.com/Findryankp/mvcGo/apps/features"
+	"github.com/Findryankp/mvcGo/apps/features/users"
 	"github.com/Findryankp/mvcGo/apps/utils"
 )
 
@@ -35,6 +36,8 @@ func CommandInit() {
 	configs.ResponseCreate()
 	configs.MysqlConCreate()
 	features.InitRouteCreate()
+
+	users.InitUsers()
 
 	//add to Main function
 	configs.MainAdd()

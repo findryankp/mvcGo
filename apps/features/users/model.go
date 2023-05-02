@@ -1,9 +1,20 @@
 package users
 
-import "github.com/Findryankp/mvcGo/apps/utils"
+import (
+	"fmt"
+	"os"
+
+	"github.com/Findryankp/mvcGo/apps/utils"
+)
 
 func UserModelCreate() {
+	fileName := fmt.Sprintf("./models/%s.go", "Users")
+	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
+	if err != nil {
+		return
+	}
 
+	utils.FilesAddContent(file, UserModelContent())
 }
 
 func UserModelContent() string {

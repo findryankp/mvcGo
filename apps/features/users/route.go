@@ -1,8 +1,24 @@
 package users
 
-import "github.com/Findryankp/mvcGo/apps/utils"
+import (
+	"fmt"
+	"os"
 
-func UsersRouteCreate() {}
+	"github.com/Findryankp/mvcGo/apps/utils"
+)
+
+func UsersRouteCreate() {
+	fileName := fmt.Sprintf("./routes/%s.go", "Users")
+	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
+	if err != nil {
+		return
+	}
+
+	utils.FilesAddContent(file, UserModelContent())
+
+	lineNumber := utils.LineNumberGet("./routes/initRoutes.go", `func InitRouter(e *echo.Echo)`)
+	utils.LineNumberInsertText("./routes/initRoutes.go", `func InitRouter(e *echo.Echo){`+"\n"+`	`+"UsersRouter(e)", lineNumber-1)
+}
 
 func UserRouteContent() string {
 	moduleName, _ := utils.ModuleNameGet()
@@ -15,12 +31,10 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func authRouter(e *echo.Echo) {
-	g := e.Group("/auth")
-	g.POST("/register", controllers.Register)
-	g.POST("/login", controllers.Login)
+func UsersRouter(e *echo.Echo) {
+	e.POST("/register", controllers.Register)
+	e.POST("/login", controllers.Login)
 }
 	`
-
 	return text
 }
