@@ -39,7 +39,7 @@ go run . init
 
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/env.png" alt="Logo" height="150" width="200">
+    <img src="images/env.png" alt="Logo" height="150" width="300">
   </a>
 </div>
 
