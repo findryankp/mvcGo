@@ -27,14 +27,13 @@ for example :
 go run . init
 ```
 
-3. If success, tile like this will be generated :
-<br/>
+3. If success, files like this will be generated :
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/02.png" alt="Logo" height="200" width="500">
   </a>
 </div>  
-
+<br/>
 4. Set .env with your own configuration database
 
 <div align="left">
@@ -50,4 +49,7 @@ go run . features FeaturesNames
 ```
 ex : go run mvcGo features Products
 
-### Done, enjoy it.
+### Run Project
+```shell
+go run .
+```
