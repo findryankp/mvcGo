@@ -11,12 +11,12 @@ func DockerCreate() {
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
-		utils.FilesAddContent(file, DockerCotent())
+		utils.FilesAddContent(file, DockerContent())
 		fmt.Println("setup docker success")
 	}
 }
 
-func DockerCotent() string {
+func DockerContent() string {
 	moduleName, _ := utils.ModuleNameGet()
 	var text = `
 	FROM golang:1.20-alpine

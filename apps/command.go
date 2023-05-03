@@ -37,4 +37,5 @@ func CommandInit() {
 	features.InitRouteCreate()
 	middlewares.InitMiddlewares()
 	users.InitUsers()
+	configs.DockerCreate()
 }
