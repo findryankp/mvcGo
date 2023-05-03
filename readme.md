@@ -21,7 +21,7 @@ for example :
   </a>
 </div>
 
-2. Run this syntax in cmd
+2. Run this syntax in cmd/terminal
 ```shell
 go run . init
 ```
@@ -48,7 +48,7 @@ go run . init
 </div>
 
 ## Create new feature
-run this in your cmd
+run this syntax in your cmd/terminal
 ```shell
 go run . features FeaturesNames
 ```
