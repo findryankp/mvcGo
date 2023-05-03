@@ -70,3 +70,7 @@ try it with your postman or another
     <img src="images/04.png" alt="Logo" height="200" width="380">
   </a>
 </div>
+
+## Development by
+Findryankp
+[![LinkedIn](https://img.shields.io/badge/linkedin-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Findryankp/)
