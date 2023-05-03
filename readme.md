@@ -1,6 +1,7 @@
 # mvcGo
 Inspired from laravel to automate feature creation to make it faster and easier.
 * MVC Architecture with Echo framework, Gorm, etc.
+* Make CRUD new feature less than 1 minutes.
 
 ## Import
 ```shell
@@ -30,6 +31,7 @@ go run . init
 * middlewares (jwt auth, logs, cors)
 * user auth (login, register)
 * environment (.env)
+* etc
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/02.png" alt="Logo" height="250" width="500">
