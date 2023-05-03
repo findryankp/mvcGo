@@ -27,7 +27,7 @@ for example :
 go run . init
 ```
 
-3. If success, files thats are generated are :
+3. If success, the files that will be generated are :
 * configs database
 * middlewares (jwt auth, logs, cors)
 * user auth (login, register)
