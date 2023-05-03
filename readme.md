@@ -2,9 +2,6 @@
 Inspired from laravel to automate feature creation to make it faster and easier.
 * MVC Architecture with Echo framework, Gorm, etc.
 
-**Development by:** 
-- Findryankp
-
 ## Import
 ```shell
 go get -u github.com/Findryankp/mvcGo@latest
