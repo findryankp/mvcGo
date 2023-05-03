@@ -1,5 +1,5 @@
 # mvcGo
-Inspired from laravel to automate feature creation to make it faster and easier
+Inspired from laravel to automate feature creation to make it faster and easier.
 
 **Development by:** 
 - Findryankp
@@ -27,7 +27,11 @@ for example :
 go run . init
 ```
 
-3. If success, files like this will be generated :
+3. If success, files thats are generated are :
+* configs database
+* middlewares (jwt auth, logs, cors)
+* user auth (login, register)
+* environment (.env)
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/02.png" alt="Logo" height="250" width="500">
