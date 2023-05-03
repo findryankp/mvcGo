@@ -1,5 +1,6 @@
 # mvcGo
 Inspired from laravel to automate feature creation to make it faster and easier.
+* MVC Architecture with Echo framework, Gorm, etc.
 
 **Development by:** 
 - Findryankp
