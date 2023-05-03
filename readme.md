@@ -72,5 +72,5 @@ try it with your postman or another
 </div>
 
 ## Development by
-[![Findryankp](https://img.shields.io/badge/Findryankp-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Findryankp)
-[![findryankp](https://img.shields.io/badge/linkedin-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Findryankp/)
+[![Findryankp](https://img.shields.io/badge/Findryankp-grey?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Findryankp)
+[![findryankp](https://img.shields.io/badge/findryankp-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Findryankp/)
