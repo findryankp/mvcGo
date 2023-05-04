@@ -31,7 +31,7 @@ go run . init
 * configs database
 * middlewares (jwt auth, logs, cors)
 * user auth (login, register)
-* environment (.env)
+* environment (.env) and dockerfile
 * etc
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
