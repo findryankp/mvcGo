@@ -53,7 +53,7 @@ run this syntax in your cmd/terminal
 ```shell
 go run . features FeaturesNames
 ```
-ex : go run mvcGo features Rooms
+ex : go run . features Rooms
 
 * CRUD controller, model, route, and migratiton feature from your FeatureNames will be created
 <div align="left">
