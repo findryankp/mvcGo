@@ -1,7 +1,7 @@
 # mvcGo
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo"  width="30%">
+    <img src="images/logo.png" alt="Logo"  width="25%">
   </a>
 </div>
 
