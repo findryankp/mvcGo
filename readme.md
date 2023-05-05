@@ -1,5 +1,5 @@
 # mvcGo
-Inspired from laravel to automate feature creation to make it faster and easier.
+MVC starter pack, Inspired from laravel to automate feature creation to make it faster and easier.
 * MVC Architecture with Echo framework, Gorm, etc.
 * Make CRUD new feature less than 1 minutes.
 * Dockerfile will be generated too.
