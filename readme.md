@@ -1,11 +1,4 @@
 # mvcGo
-<div align="left">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="20%">
-  </a>
-</div>
-
-## 💫 About
 Inspired from laravel to automate feature creation to make it faster and easier.
 * MVC Architecture with Echo framework, Gorm, etc.
 * Make CRUD new feature less than 1 minutes.
