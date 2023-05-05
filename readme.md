@@ -17,15 +17,14 @@ go get -u github.com/Findryankp/mvcGo@latest
 ```
 
 ## 👨🏽‍💻 Step By Step
-1. First step, add this go syntax to your **main** function
+1. First step, add this go syntax to your `main function`
 ```go
 mvcGo.Init()
 ```
-for example :
-<br/>
+* for example :
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/01.png" alt="Logo" height="200" width="400">
+    <img src="images/01.png" alt="Logo" width="40%">
   </a>
 </div>
 
@@ -42,26 +41,23 @@ go run . init
 * etc
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/02.png" alt="Logo" height="250" width="500">
+    <img src="images/02.png" alt="Logo" width="60%">
   </a>
-</div>  
-<br/>
+</div> 
 
-4. Set .env with your own configuration database
-
+4. Set `.env` with your own configuration database
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/env.png" alt="Logo" height="150" width="300">
+    <img src="images/env.png" alt="Logo" width="60%">
   </a>
 </div>
 
 ## 🚀 Create new feature
-run this syntax in your cmd/terminal
+* run this syntax in your cmd/terminal
 ```shell
 go run . features FeaturesNames
 ```
-ex : go run . features Rooms
-
+* ex : `go run . features Rooms`
 * CRUD controller, model, route, and migratiton feature from your FeatureNames will be created
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
@@ -74,7 +70,7 @@ ex : go run . features Rooms
 go run .
 ```
 
-try it with your postman or another
+* try it with your postman or another
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/04.png" alt="Logo" width="60%">
