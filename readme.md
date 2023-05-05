@@ -73,7 +73,7 @@ go run .
 * try it with your postman or another
 <div align="left">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/04.png" alt="Logo" width="60%">
+    <img src="images/05.png" alt="Logo" width="60%">
   </a>
 </div>
 
