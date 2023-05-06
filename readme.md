@@ -1,6 +1,6 @@
 # mvcGo
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="images/logo.png">
     <img src="images/logo.png" alt="Logo"  width="20%">
   </a>
 </div>
@@ -23,7 +23,7 @@ mvcGo.Init()
 ```
 * for example :
 <div align="left">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="images/01.png">
     <img src="images/01.png" alt="Logo" width="40%">
   </a>
 </div>
@@ -40,14 +40,14 @@ go run . init
 * environment (.env) and dockerfile
 * etc
 <div align="left">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="images/02.png">
     <img src="images/02.png" alt="Logo" width="60%">
   </a>
 </div> 
 
 4. Set `.env` with your own configuration database
 <div align="left">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="images/env.png">
     <img src="images/env.png" alt="Logo" width="60%">
   </a>
 </div>
@@ -60,7 +60,7 @@ go run . features FeaturesNames
 * ex : `go run . features Rooms`
 * CRUD controller, model, route, and migratiton feature from your FeatureNames will be created
 <div align="left">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="images/03.png">
     <img src="images/03.png" alt="Logo" height="180" width="400">
   </a>
 </div>
@@ -72,7 +72,7 @@ go run .
 
 * try it with your postman or another
 <div align="left">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="images/05.png">
     <img src="images/05.png" alt="Logo" width="60%">
   </a>
 </div>
