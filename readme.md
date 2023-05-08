@@ -70,7 +70,7 @@ go run . features FeaturesNames
 go run .
 ```
 
-* try it with your postman or another
+* Try it with your postman or another
 <div align="left">
   <a href="images/05.png">
     <img src="images/05.png" alt="Logo" width="60%">
