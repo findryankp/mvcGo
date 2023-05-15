@@ -6,10 +6,9 @@
 </div>
 
 ## 💫 About
-Inspired from laravel to automate feature creation to make it faster and easier.
-* MVC Architecture with Echo framework, Gorm, etc.
-* Make CRUD new feature less than 1 minutes.
-* Dockerfile will be generated too.
+Inspired by Laravel, we aim to automate feature creation to make it faster and easier. Our approach includes using the MVC architecture with the Echo framework, Gorm, and other tools. 
+
+Our goal is to make it possible to create CRUD features in less than one minute. Additionally, a `Dockerfile`, `.gitignore` will also be generated.
 
 ## 🚀 Import
 ```shell
@@ -17,14 +16,14 @@ go get -u github.com/Findryankp/mvcGo@latest
 ```
 
 ## 👨🏽‍💻 Step By Step
-1. First step, add this go syntax to your `main function`
+1. First step, add this syntax to your `main function` in `main.go` file
 ```go
 mvcGo.Init()
 ```
 * for example :
-<div align="left">
+<div align="center">
   <a href="images/01.png">
-    <img src="images/01.png" alt="Logo" width="40%">
+    <img src="images/01.png" alt="Logo" width="50%">
   </a>
 </div>
 
@@ -33,20 +32,20 @@ mvcGo.Init()
 go run . init
 ```
 
-3. If success, the files that will be generated are :
-* configs database
-* middlewares (jwt auth, logs, cors)
-* user auth (login, register)
-* environment (.env) and dockerfile
-* etc
-<div align="left">
+3. If successful, the following files will be generated:
+* Database configuration files
+* Middleware files (including JWT authentication, logging, and CORS)
+* User authentication files (for login and registration)
+* Environment files (.env) and Dockerfile
+* And more
+<div align="center">
   <a href="images/02.png">
     <img src="images/02.png" alt="Logo" width="60%">
   </a>
 </div> 
 
 4. Set `.env` with your own configuration database
-<div align="left">
+<div align="center">
   <a href="images/env.png">
     <img src="images/env.png" alt="Logo" width="60%">
   </a>
