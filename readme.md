@@ -58,7 +58,7 @@ go run . features FeaturesNames
 ```
 * ex : `go run . features Rooms`
 * CRUD controller, model, route, and migratiton feature from your FeatureNames will be created
-<div align="left">
+<div align="center">
   <a href="images/03.png">
     <img src="images/03.png" alt="Logo" height="180" width="400">
   </a>
@@ -70,7 +70,7 @@ go run .
 ```
 
 * Try it with your postman or another
-<div align="left">
+<div align="center">
   <a href="images/05.png">
     <img src="images/05.png" alt="Logo" width="60%">
   </a>
