@@ -13,6 +13,7 @@ func InitConfig() {
 	MainAdd()
 	PasswordCreate()
 	LoadConfigCreate()
+	TxtCreate()
 }
 
 func LoadConfigCreate() {

@@ -11,8 +11,10 @@ import (
 )
 
 func ExcecutionArgument(arg []string) {
-	if arg[1] == "features" {
+	if arg[1] == "features" || arg[1] == "-f" {
 		CommandFeature(arg)
+	}else if arg[1] == "featuresTxt" || arg[1] == "-ft"{
+		CommandFeatureTxt(arg)
 	} else if arg[1] == "init" {
 		CommandInit()
 	}
@@ -23,6 +25,17 @@ func CommandFeature(arg []string) {
 		fmt.Println("wrong argument")
 	} else {
 		features.ModelCreate(arg[2])
+		features.ControllerCreate(arg[2])
+		features.RouteCreate(arg[2])
+		features.MigrationCreate(arg[2])
+	}
+}
+
+func CommandFeatureTxt(arg []string) {
+	if len(arg) != 3 {
+		fmt.Println("wrong argument")
+	} else {
+		features.ModelContentFromTxt(arg[2])
 		features.ControllerCreate(arg[2])
 		features.RouteCreate(arg[2])
 		features.MigrationCreate(arg[2])
