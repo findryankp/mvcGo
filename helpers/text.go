@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"regexp"
 	"strings"
 )
 
@@ -41,4 +42,13 @@ func ExplodeStringFromTxt(stringFromTxt []string) map[int][]string {
 
 	// Return the resulting map
 	return result
+}
+
+func CamelToSnake(input string) string {
+	// Find positions where a lowercase letter is followed by an uppercase letter
+	re := regexp.MustCompile("([a-z0-9])([A-Z])")
+	// Replace matches with a lowercase letter followed by an underscore and the uppercase letter
+	result := re.ReplaceAllString(input, "${1}_${2}")
+	// Convert the entire string to lowercase
+	return strings.ToLower(result)
 }

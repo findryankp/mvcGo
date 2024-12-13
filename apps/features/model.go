@@ -93,7 +93,7 @@ func ModelContentFromTxt(modelName string) (text string) {
 	for _, field := range fields {
 		name := strings.Title(field[0])
 		typeDef := field[1]
-		jsonTag := strings.ToLower(field[0])
+		jsonTag := helpers.CamelToSnake(field[0])
 
 		// Add to struct fields
 		structFields = append(structFields, "\t"+name+" "+typeDef)
