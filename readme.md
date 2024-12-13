@@ -54,9 +54,22 @@ go run . init
 ## 🚀 Create new feature
 * run this syntax in your cmd/terminal
 ```shell
-go run . features FeaturesNames
+go run . -ft FeaturesNames
 ```
-* ex : `go run . features Rooms`
+* ex : `go run . -ft Rooms`
+* CRUD controller, model, route, and migratiton feature from your FeatureNames will be generated based from `model.txt`
+<div align="center">
+  <a href="images/06.png">
+    <img src="images/06.png" alt="Logo" height="180" width="400">
+  </a>
+</div>
+
+### Simple Features
+* run this syntax in your cmd/terminal
+```shell
+go run . -f FeaturesNames
+```
+* ex : `go run . -f Rooms`
 * CRUD controller, model, route, and migratiton feature from your FeatureNames will be created
 <div align="center">
   <a href="images/03.png">
