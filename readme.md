@@ -6,9 +6,9 @@
 </div>
 
 ## 💫 About
-We aim to automate feature creation to make it faster and easier. Our approach includes using the MVC architecture with the Echo framework, Gorm, and other tools. 
+We aim to automate feature creation, making it faster and easier. Our approach leverages the MVC architecture with the Echo framework, Gorm, and other tools.
 
-Our goal is to make it possible to create CRUD features in less than one minute. Additionally, a `Dockerfile`, `.gitignore` will also be generated.
+Our goal is to enable the creation of CRUD features in less than one minute. Additionally, a `Dockerfile` and a `.gitignore` file will also be generated.
 
 ## 🚀 Import
 ```shell
