@@ -20,7 +20,7 @@ func Init() error {
 
 func Command(argsRaw []string) {
 	args := []string{
-		"features", "init",
+		"features", "init", "featuresTxt", "-i", "-f", "-ft",
 	}
 
 	flag := false
@@ -34,5 +34,6 @@ func Command(argsRaw []string) {
 	if !flag {
 		fmt.Println(`1. "init" for init project`)
 		fmt.Println(`2. "features or -f" for create feature`)
+		fmt.Println(`3. "featuresTxt or -ft" for create feature from Model.TXT`)
 	}
 }
