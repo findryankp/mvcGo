@@ -35,7 +35,7 @@ func CommandFeatureTxt(arg []string) {
 	if len(arg) != 3 {
 		fmt.Println("wrong argument")
 	} else {
-		features.ModelContentFromTxt(arg[2])
+		features.ModelCreateFromTxt(arg[2])
 		features.ControllerCreate(arg[2])
 		features.RouteCreate(arg[2])
 		features.MigrationCreate(arg[2])

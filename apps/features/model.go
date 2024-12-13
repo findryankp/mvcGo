@@ -69,6 +69,20 @@ func ListModelToResponse` + modelName + `(dt []` + modelName + `) []` + modelNam
 	return
 }
 
+func ModelCreateFromTxt(modelName string) {
+	fileName := fmt.Sprintf("./models/%s.go", modelName)
+
+	// Attempt to open the file
+	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
+	if err != nil {
+		return
+	}
+
+	utils.FilesAddContent(file, ModelContentFromTxt(modelName))
+
+	fmt.Println("Model successfully created")
+}
+
 func ModelContentFromTxt(modelName string) (text string) {
 	// lowerCase := strings.ToLower(modelName)
 	getStr := helpers.GetStringFromTxt()
@@ -135,6 +149,6 @@ func ListModelToResponse` + modelName + `(dt []` + modelName + `) []` + modelNam
 	return responses
 }
 `
-	
+
 	return text
 }
