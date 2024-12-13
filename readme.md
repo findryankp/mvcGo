@@ -12,7 +12,7 @@ Our goal is to make it possible to create CRUD features in less than one minute.
 
 ## 🚀 Import
 ```shell
-go get -u github.com/findryankp/mvcGo@latest
+go get -u github.com/Findryankp/mvcGo@latest
 ```
 
 ## 👨🏽‍💻 Step By Step
